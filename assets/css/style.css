@@ -1,0 +1,70 @@
+
+
+
+/*#hangmanpic{
+	width: 500px;
+	height: 150px;
+}
+.flex-container{
+	position: relative;
+	display: flex;
+	direction: row;
+	flex-wrap: wrap;
+	width: 40%;
+	margin:0 auto;
+	justify-content: space-around;
+	border: 1px solid black;
+}
+.flex-item{
+	/*border: 1px solid black;*/
+
+/*}
+#character{
+	position: absolute;
+	width: 100%;
+	top:100px;
+	text-align: center;
+}
+#character:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+#character h1{
+	color:white;
+}*/
+
+/*#image{
+
+	width: 200px;
+	height: 150px;
+}*/
+/*BOOTSTRAP*/
+
+.container{
+	width:60%;
+}
+.jumbotron{
+	margin-bottom:0px;
+}
+.jumbotron h1{
+	text-align: center;
+}
+h1#result{
+	text-align: center;
+}
+div.res{
+	background: black;
+	color:white;
+	/*margin:0 30px;*/
+
+}
+div.main{
+	background:#eee;
+	border:1px solid #aaa;
+}
+
+#image{
+	width: 300px;
+	height: 250px;	
+}

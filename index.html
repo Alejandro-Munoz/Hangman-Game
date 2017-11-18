@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+	<div class="container" style="width:60%">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="jumbotron">
+					<h1>Hangman</h1>
+				</div>	
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="col-md-12 res">
+				<h1 id="result"></h1>
+			</div>
+		</div>
+		<div class="row main">
+			<div class="col-md-5">
+				<img id="image" class="thumbnail" src="" alt="">
+			</div>
+			<div class="col-md-7">
+				<h2>Press Any Key to get Started!!</h2>
+				<h3>Wins</h3>
+				<div id="numberOfWins"></div>
+				<h3>Current Word</h3>
+				<div id="currentWord"></div>
+				<h3>Number of Guess Remaining</h3>
+				<div id="guessRemaining"></div>
+				<h3>Letters Already Guessed</h3>
+				<div id="alreadyGuessed"></div>
+			</div>
+		</div>
+	</div>
+	<audio id="win">
+	  <source src="assets/media/correct.m4a" type="audio/mpeg">
+	  Your browser does not support the audio element.
+	</audio>
+	<audio id="guess">
+	  <source src="assets/media/guessed.m4a" type="audio/mpeg">
+	  Your browser does not support the audio element.
+	</audio>
+	<audio id="repeat">
+	  <source src="assets/media/repeat.m4a" type="audio/mpeg">
+	  Your browser does not support the audio element.
+	</audio>
+
+	
+
+
+	<!-- <div class="flex-container">
+		<img id="hangmanpic" class="flex-item"  src="assets/images/maxresdefault.jpg" alt="Hangman Game">
+		<section id="character" class="flex-item">
+			<h1 id="charName"></h1>
+		</section>
+		<section class="pic flex-item">
+			<img id="image" src="" alt="">
+		</section>
+		<section>
+			<h1 id="charName"></h1>
+		</section>
+		<section class="game flex-item">
+			<div><h1>Press any key to get started!</h1></div>
+			<h3>Wins</h3>
+			<div id="numberOfWins"></div>
+			<h3>Current Word</h3>
+			<div id="currentWord"></div>
+			<h3>Number of Guess Remaining</h3>
+			<div id="guessRemaining"></div>
+			<h3>Letters Already Guessed</h3>
+			<div id="alreadyGuessed"></div>
+			<br>
+			<br>
+		</section>
+	</div> -->
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+</html>
