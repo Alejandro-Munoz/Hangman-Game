@@ -6,7 +6,6 @@ function startGame(){
 	game.setHiddenWord();
 	game.setRemain();
 	game.setDefaultImage();
-
 }
 
 function getNewWord(){
@@ -15,39 +14,38 @@ function getNewWord(){
 	console.log(i);
 	game.currentWord = game.arrWords[i];
 }
+
 function generateDashedArray(){
-	// console.log("generateDashedArray " + str);
 	var dashArr=[];
 	for(var j =0; j < game.currentWord.length; j++){
-		// console.log(str [j]);
 		dashArr.push("__");
 
 	}
 		game.dashWord=dashArr;
 }
+
 function setWins(){
 	var wins = document.getElementById("numberOfWins");
-	// console.log("curwoerd: "+curWord);
 	wins.innerHTML = "<h3>" + game.wins + "</h3>"; 
 }
+
 function setHiddenWord(){
 	var str="";
 	var curWord = document.getElementById("currentWord");
 	console.log("curwoerd: "+curWord);
-
 	curWord.innerHTML = game.dashWord.join(" ");
-
 }
+
 function setRemain(){
 	var remain = document.getElementById("guessRemaining");
-	// console.log("curwoerd: "+curWord);
 	remain.innerHTML = "<h3>" + game.guessRemaining + "</h3>";
 }
+
 function setDefaultImage(){
 	var pic = document.getElementById("image");
-	// console.log("pic: " + pic);
 	pic.setAttribute("src","assets/images/gameofCharacters.jpg");	
 }
+
 function updateState(){
 	game.setWins();
 	game.getNewWord();
@@ -57,19 +55,15 @@ function updateState(){
 	game.displayGuessed();
 
 }
-function matchWord(){
-		console.log("match: " + game.currentWord + " vs " + game.dashWord.join(""));
 
+function matchWord(){
 	if (game.currentWord ===game.dashWord.join("")){
-		// TODO Implementar codigo para cuando adivina la palabra y empieza otro juego
 		game.wins++;
 		game.setWins();
-		// game.updateState();
 		var result = document.getElementById("result");
 		result.innerHTML = game.currentWord;
 		var image = document.getElementById("image");
 		image.setAttribute("src","assets/images/"+game.currentWord+".jpeg");
-		console.log("<h1>Has Ganado!!!</h1>");
 		var win = document.getElementById("win");
 		win.play();
 		return true;
@@ -77,13 +71,10 @@ function matchWord(){
 	return false;
 }
 
-
 function updateDashWord(ltrGuessed){
 	console.log("entra updateDashWord " + ltrGuessed);
 	for (var i = 0; i < game.alreadyGuessed.length; i++) {
-		console.log("outer for: " + game.alreadyGuessed[i])
 		for(var j = 0; j < game.currentWord.length; j++){
-
 			if(game.alreadyGuessed[i]===game.currentWord[j]){
 				game.dashWord[j] = game.alreadyGuessed[i];
 			}
@@ -99,15 +90,15 @@ function displayGuessed(){
 }
 
 function displayLose(){
+	var fail = document.getElementById("fail");
+		fail.play();
 	var result = document.getElementById("result");
 		result.innerHTML = "You Loose! Try again";
 }
 
 function checkLetter(letter){
 	var match = false;
-	// console.log(game.currentWord);
 	if(!game.alreadyGuessed.includes(letter)){
-		console.log("entra");
 		//Add to already guessed letters array
 		game.alreadyGuessed.push(letter);
 		// Look up if letter belongs to word, if so add to game.dashWord array
@@ -147,8 +138,6 @@ function resetGame(){
 	game.dashWord=[];
 	game.guessRemaining=10;
 	game.alreadyGuessed=[];
-	console.log("&&&&&", game.alreadyGuessed);
-
 }
 // Game Object
 var game = {
