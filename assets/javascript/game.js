@@ -32,7 +32,7 @@ function setWins(){
 function setHiddenWord(){
 	var str="";
 	var curWord = document.getElementById("currentWord");
-	console.log("curwoerd: "+curWord);
+	console.log("setHiddenWord: "+ game.dashWord.join(" "));
 	curWord.innerHTML = game.dashWord.join(" ");
 }
 
@@ -81,12 +81,12 @@ function updateDashWord(ltrGuessed){
 		}
 	}
 	var el = document.getElementById("currentWord");
-	el.innerHTML = "<h3>"+game.dashWord;+"</h3>";
+	el.innerHTML = "<h3>"+game.dashWord.join(" ");+"</h3>";
 }
 
 function displayGuessed(){
 	var div = document.getElementById("alreadyGuessed");
-	div.innerHTML = "<h3>"+game.alreadyGuessed+"</h3>";
+	div.innerHTML = "<h3>"+game.alreadyGuessed.join(" ")+"</h3>";
 }
 
 function displayLose(){
